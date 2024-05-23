@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  background-color: #fff
+}
+
+.home {
+  width:150px
+}
+
+.card {
+  flex: 0 0 130px; 
+  width: 6%;
+  height: 100vh;  
+  text-align: center;
+  background-color: #1c3259;
+  -moz-transition: width 0.5s ease;
+  -webkit-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease; 
+}
+
+.link {
+  display: inline-block; 
+  margin: 5px; 
+  padding: 10px 15px; 
+  background-color: #203966; 
+  color: #FFF; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.link:hover {
+  background-color: #0056b3; 
+}
+
+.title {
+  position: relative;
+  bottom: -500px;
+  font-size: 26px;
+  background-color: #d69a19;
+  color: #fff;
+  text-transform: uppercase;
+  transform: rotate(90deg); 
+}
+
+
+
+
+
+
+
+/* body {
+  background-color: #465672;
+}
+
+.card.hover {
+  width: 34%;
+  background-color: #000;
+  color: #000;
+}
+
+.card {
+  height: 900px;
+  width: 10%;
+  background-color: #1c3259;
+  color: #fff;
+  display: inline-block;
+  align-items:center;
+  margin: 0 0.5% 10px;
+  position: relative;
+  overflow: hidden;
+  -moz-transition: width 0.5s ease;
+  -webkit-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+  padding: 10px 0.5%;
+}
+
+.card button {
+  display: flex;
+  background-color: #203966;
+  color: #fff;
+  padding: 5px 10px;
+  border: 0;
+  margin: 0 0 15px;
+}
+
+.card .title {
+  position: relative;
+  bottom: -800px;
+  left: 0%;
+  width: 100%;
+  background-color: #d69a19;
+  color: #fff;
+  text-transform: uppercase;
+  transform: rotate(90deg);
+}
+
+@media only screen and (max-width: 1199px) {
+  .card,
+  .card.hover {
+    width: 100%;
+  }
+
+  .card {
+    height: 150px;
+  }
+
+  .card.hover {
+    height: 250px;
+  }
+
+  .card.hover .less {
+    display: block;
+  }
+
+  .card.hover .more {
+    display: none;
+  }
+
+  .card .more {
+    display: block;
+  }
+} */
