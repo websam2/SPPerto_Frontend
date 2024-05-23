@@ -1,4 +1,4 @@
-#portal {
+/* #portal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -56,7 +56,7 @@
   color: #fff;
   text-transform: uppercase;
   transform: rotate(90deg);
-}
+} */
 
 /* @media only screen and (max-width: 1199px) {
   .card,

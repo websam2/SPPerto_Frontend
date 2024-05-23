@@ -1,11 +1,11 @@
-<div id="portal">
-  <section id="sidebar">teste</section>
-  <section id="listItems" *ngFor="let card of cards">
-    <div class="card">
-      <button class="link" *ngFor="let link of card.links">
+<div class="flex justify-center items-center w-full h-screen bg-bg" id="portal">
+  <section class="relative" id="sidebar">teste hdfg</section>
+  <section class="" id="listItems" *ngFor="let card of cards">
+    <div class="bg-blue-dark h-screen text-center" id="card">
+      <button class="w-10/12 m-4 p-4 bg-button text-bg border-none cursor-pointer" id="link" *ngFor="let link of card.links">
         Link {{ link }}
       </button>
-      <div class="title">{{ card.title }}</div>
+      <div class="font-semibold size-16 rotate-90 bg-yellow text-bg uppercase" id="title">{{ card.title }}</div>
     </div>
   </section>
 </div>
