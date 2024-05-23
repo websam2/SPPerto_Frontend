@@ -1,9 +1,11 @@
-<div class="container">
-  <div class="home">teste</div>
-  <div class="card" *ngFor="let selection of selections">
-    <div class="selection">      
-      <button class="link" *ngFor="let link of selection.links">Link {{ link }}</button>
-      <div class="title">{{ selection.title }}</div>
+<div id="portal">
+  <section id="sidebar">teste</section>
+  <section id="listItems" *ngFor="let card of cards">
+    <div class="card">
+      <button class="link" *ngFor="let link of card.links">
+        Link {{ link }}
+      </button>
+      <div class="title">{{ card.title }}</div>
     </div>
-  </div>
+  </section>
 </div>
