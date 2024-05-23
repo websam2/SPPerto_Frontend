@@ -1,11 +1,25 @@
-<div class="flex justify-center items-center w-full h-screen bg-bg" id="portal">
-  <section class="relative" id="sidebar">teste hdfg</section>
-  <section class="" id="listItems" *ngFor="let card of cards">
-    <div class="bg-blue-dark h-screen text-center" id="card">
-      <button class="w-10/12 m-4 p-4 bg-button text-bg border-none cursor-pointer" id="link" *ngFor="let link of card.links">
+<div class="flex flex-row h-screen w-screen" id="portal">
+  <section class="bg-bg" id="sidebar">teste hdfg</section>
+  <section
+    class="flex flex-col justify-around bg-gradient-to-bl from-blue-dark to-blue text-center"
+    id="listItems"
+    *ngFor="let link of links"
+  >
+    <div>
+      <button
+        id="link"
+        class="w-10/12 m-4 p-4 bg-button text-bg border-none cursor-pointer rounded-md"
+        id="link"
+        *ngFor="let link of link.links"
+      >
         Link {{ link }}
       </button>
-      <div class="font-semibold size-16 rotate-90 bg-yellow text-bg uppercase" id="title">{{ card.title }}</div>
+    </div>
+    <div
+      id="secretaria"
+      class="bottom-0 font-semibold text-2xl rotate-90 bg-yellow text-bg uppercase"
+    >
+      {{ link.title }}
     </div>
   </section>
 </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface Card {
+interface Link {
   title: string;
   links: number[]; 
 }
@@ -11,7 +11,7 @@ interface Card {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  cards: Card[] = [
+  links: Link[] = [
     { title: 'Secretaria 1', links: [1, 2, 3, 4, 5, 6] },
     { title: 'Secretaria 2', links: [1, 2, 3, 4, 5, 6] },
     { title: 'Secretaria 3', links: [1, 2, 3, 4, 5, 6] },
