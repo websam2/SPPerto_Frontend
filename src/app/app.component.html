@@ -1,16 +1,26 @@
-<div class="flex flex-row justify-center h-screen w-full" id="portal">
-  <section class="flex flex-col justify-between items-center w-auto bg-bg"  id="sidebar">
-    <img class="w-60 m-4" src="../assets/logo_canaldireto.svg" alt="SP+Perto">
-    <h1 class="text-wrap font-bold m-4">Ferramentas de todas as secretarias em um único só lugar!</h1>
+<div class="flex flex-col xl:flex xl:flex-row justify-center xl:h-screen xl:w-full w-screen" id="portal">
+  <section
+    class="flex flex-row xl:flex-col justify-between items-center xl:w-1/2 bg-bg"
+    id="sidebar"
+  >
+    <img class="w-60 m-4 cursor-pointer" src="../assets/logo_canaldireto.svg" alt="SP+Perto" />
+    <h1 class="text-wrap font-bold m-4">
+      Ferramentas de todas as secretarias em um único só lugar!
+    </h1>
     <p>Data e Hora</p>
   </section>
   <section
-    class="flex flex-col relative w-auto bg-gradient-to-bl from-blue-dark to-blue text-center"
+    class="xl:flex xl:flex-col relative w-auto bg-gradient-to-bl from-blue-dark to-blue text-center cursor-pointer"
     id="listItems"
     *ngFor="let link of links"
   >
     <div class="group">
-      <img class="p-4" src="../assets/logo_canaldireto.svg" alt="Logos">
+      <img
+        class="p-4"
+        id="logo"
+        src="../assets/logo_canaldireto.svg"
+        alt="Logos"
+      />
       <button
         id="link"
         class="m-4 p-4 bg-button text-bg border-none cursor-pointer rounded-md"
