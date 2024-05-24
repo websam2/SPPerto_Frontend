@@ -10,12 +10,12 @@
 
 #listItems {
   opacity: 1;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
   width: 5%;
 }
 
 #listItems:hover {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  filter: brightness(1.2);
+  box-shadow: -2px -2px 25px #000, 2px 2px 25px #fff; 
   width: 10%;
 }

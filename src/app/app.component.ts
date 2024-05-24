@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 interface Link {
   title: string;
@@ -25,4 +26,13 @@ export class AppComponent {
     { title: 'Secretaria', links: [1, 2, 3, 4, 5, 6] },
     { title: 'Secretaria', links: [1, 2, 3, 4, 5, 6] },
   ];
+//   currentDate: string;
+
+//   constructor(private datePipe: DatePipe) {}
+
+//   ngOnInit() {
+//     // Initialize currentDate in the constructor
+//     this.currentDate = this.datePipe.transform(new Date(), 'dd/MM/yyyy HH:mm:ss', 'BRT');
+//   }
 }
+
