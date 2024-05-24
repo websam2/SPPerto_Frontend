@@ -1,14 +1,14 @@
-<div class="flex flex-row h-screen w-screen" id="portal">
+<div class="flex flex-row justify-center h-screen w-screen" id="portal">
   <section class="bg-bg" id="sidebar">teste hdfg</section>
   <section
     class="flex flex-col justify-around bg-gradient-to-bl from-blue-dark to-blue text-center"
     id="listItems"
     *ngFor="let link of links"
   >
-    <div>
+    <div class="group">
       <button
         id="link"
-        class="w-10/12 m-4 p-4 bg-button text-bg border-none cursor-pointer rounded-md"
+        class="m-4 p-4 bg-button text-bg border-none cursor-pointer rounded-md"
         id="link"
         *ngFor="let link of link.links"
       >
@@ -17,7 +17,7 @@
     </div>
     <div
       id="secretaria"
-      class="bottom-0 font-semibold text-2xl rotate-90 bg-yellow text-bg uppercase"
+      class="font-semibold text-2xl rotate-90 bg-yellow text-bg uppercase"
     >
       {{ link.title }}
     </div>

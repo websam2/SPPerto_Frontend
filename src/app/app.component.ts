@@ -4,7 +4,6 @@ interface Link {
   title: string;
   links: number[]; 
 }
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +11,7 @@ interface Link {
 })
 export class AppComponent {
   links: Link[] = [
-    { title: 'Secretaria 1', links: [1, 2, 3, 4, 5, 6] },
+    { title: 'Secretaria 1sdasdasdas', links: [1, 2, 3, 4, 5, 6] },
     { title: 'Secretaria 2', links: [1, 2, 3, 4, 5, 6] },
     { title: 'Secretaria 3', links: [1, 2, 3, 4, 5, 6] },
     { title: 'Secretaria 4', links: [1, 2, 3, 4, 5, 6] },

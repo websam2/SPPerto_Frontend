@@ -1,26 +1,21 @@
-/* @media only screen and (max-width: 1199px) {
-  .card,
-  .card {
-    height: 150px;
-  }
+#listItems:hover #link {
+  visibility: visible; /* Exibe o link ao passar o mouse */
+  transition: visibility 0.2s ease-in-out; /* Efeito de transição suave */
+}
 
-  .card.hover {
-    height: 250px;
-  }
+#link {
+  visibility: hidden; /* Oculta o link inicialmente */
+  transition: visibility 0.2s ease-in-out; /* Efeito de transição suave para hover */
+}
 
-  .card.hover .less {
-    display: block;
-  }
+#listItems {
+  opacity: 1;
+  transition: opacity 0.2s;
+  width: 5%; /* Largura inicial de 10px */
+}
 
-  .card.hover .more {
-    display: none;
-  }
-
-  .card .more {
-    display: block;
-  }
-} .hover {
-    width: 100%;
-  }
-
-  .card */
+#listItems:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  width: 10%; /* Largura original do elemento */
+}
