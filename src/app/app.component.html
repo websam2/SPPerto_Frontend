@@ -1,7 +1,11 @@
-<div class="flex flex-row justify-center h-screen w-screen" id="portal">
-  <section class="bg-bg" id="sidebar">teste hdfg</section>
+<div class="flex flex-row justify-center h-screen w-full" id="portal">
+  <section class="flex flex-col justify-between items-center w-auto bg-bg"  id="sidebar">
+    <img class="w-60 m-4" src="../assets/logo_canaldireto.svg" alt="SP+Perto">
+    <h1 class="text-wrap font-bold m-4">Ferramentas de todas as secretarias em um único só lugar!</h1>
+    <p>Data e Hora</p>
+  </section>
   <section
-    class="flex flex-col justify-around bg-gradient-to-bl from-blue-dark to-blue text-center"
+    class="flex flex-col relative w-auto bg-gradient-to-bl from-blue-dark to-blue text-center"
     id="listItems"
     *ngFor="let link of links"
   >
@@ -17,7 +21,7 @@
     </div>
     <div
       id="secretaria"
-      class="font-semibold text-2xl rotate-90 bg-yellow text-bg uppercase"
+      class="absolute -inset-x-0 bottom-28 font-semibold text-2xl p-4 rotate-90 bg-yellow text-bg uppercase"
     >
       {{ link.title }}
     </div>

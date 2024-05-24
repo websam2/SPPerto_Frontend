@@ -1,21 +1,21 @@
-#listItems:hover #link {
-  visibility: visible; /* Exibe o link ao passar o mouse */
-  transition: visibility 0.2s ease-in-out; /* Efeito de transição suave */
-}
-
 #link {
   visibility: hidden; /* Oculta o link inicialmente */
-  transition: visibility 0.2s ease-in-out; /* Efeito de transição suave para hover */
+  transition: visibility 0s ease-in-out; /* Efeito de transição suave para hover */
+}
+
+#listItems:hover #link {
+  visibility: visible; /* Exibe o link ao passar o mouse */
+  transition: visibility 0s ease-in-out; /* Efeito de transição suave */
 }
 
 #listItems {
   opacity: 1;
   transition: opacity 0.2s;
-  width: 5%; /* Largura inicial de 10px */
+  width: 5%;
 }
 
 #listItems:hover {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
-  width: 10%; /* Largura original do elemento */
+  width: 10%;
 }
