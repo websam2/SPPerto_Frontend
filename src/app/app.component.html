@@ -9,7 +9,15 @@
     </h1>
     <p>Data e Hora</p>
   </section>
-  <section
+  <section>
+    <div *ngFor="let item of data">
+      <h3>{{ item.title }}</h3>
+      <ul>
+        <li *ngFor="let link of item.links">{{ link }}</li>
+      </ul>
+    </div>
+  </section>
+  <!-- <section
     class="xl:flex xl:flex-col relative w-auto bg-gradient-to-bl from-blue-dark to-blue text-center cursor-pointer"
     id="listItems"
     *ngFor="let link of links"
@@ -36,5 +44,5 @@
     >
       {{ link.title }}
     </div>
-  </section>
+  </section> -->
 </div>

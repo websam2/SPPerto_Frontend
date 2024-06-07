@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { ApiService } from './api.service';
 
 interface Link {
   title: string;
@@ -10,29 +10,19 @@ interface Link {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  links: Link[] = [
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-    { title: 'Nome', links: [1, 2, 3, 4, 5, 6] },
-  ];
-//   currentDate: string;
+export class AppComponent implements OnInit {
+  data: any[] = [];
 
-//   constructor(private datePipe: DatePipe) {}
+  constructor(private apiService: ApiService) {}
 
-//   ngOnInit() {
-//     // Initialize currentDate in the constructor
-//     this.currentDate = this.datePipe.transform(new Date(), 'dd/MM/yyyy HH:mm:ss', 'BRT');
-//   }
+  ngOnInit() {
+    this.apiService.getData().subscribe(
+      (response) => {
+        this.data = response;
+      },
+      (error) => {
+        console.error('Erro ao carregar os dados', error);
+      }
+    );
+  }
 }
-
