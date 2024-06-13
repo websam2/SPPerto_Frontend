@@ -3,10 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SecretariaService } from './api.service';
 import { SecretariasComponent } from './secretarias/secretarias.component';
 import { SppertoComponent } from './spperto/spperto.component';
-//import { ApiService } from './api.service';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +17,7 @@ import { SppertoComponent } from './spperto/spperto.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [SecretariaService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
