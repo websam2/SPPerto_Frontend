@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { SecretariaService } from './api.service';
 
 interface Link {
   url: string;
@@ -21,19 +21,24 @@ interface Secretaria {
 })
 export class AppComponent implements OnInit {
   secretarias: Secretaria[] = [];
+  errorMessage: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private secretariaService: SecretariaService) {}
 
   ngOnInit() {
     this.getSecretarias();
   }
 
   getSecretarias(): void {
-    this.http.get<Secretaria[]>('assets/secretarias.json').subscribe((data) => {
-      this.secretarias = data.map(secretaria => ({
-        ...secretaria,
-        links: secretaria.links.filter(link => link.url)  // Filtra links vazios
-      }));
+    this.secretariaService.getSecretarias().subscribe({
+      next: (data) => {
+        this.secretarias = data;
+        console.log('Dados recebidos:', this.secretarias);       
+      },
+      error: (error) => {
+        this.errorMessage = error;
+        console.error('There was an error!', error);
+      }
     });
   }
 }
