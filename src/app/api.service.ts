@@ -1,21 +1,3 @@
-// import { Injectable } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-// import { Observable } from 'rxjs';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class SecretariaService {
-//   private jsonURL = 'assets/secretarias.json';
-
-//   constructor(private http: HttpClient) {}
-
-//   getSecretarias(): Observable<any> {
-//     return this.http.get(this.jsonURL);
-//   }
-// }
-
-
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
@@ -26,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class SecretariaService {
 
-  private apiUrl = 'http://10.106.10.213:5000/';
+  private apiUrl = 'http://127.0.0.1:5000/';
 
   constructor(private http: HttpClient) { }
 
@@ -51,6 +33,23 @@ export class SecretariaService {
     return throwError(() => new Error(errorMessage));
   }
 }
+
+// import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class SecretariaService {
+//   private jsonURL = 'assets/secretarias.json';
+
+//   constructor(private http: HttpClient) {}
+
+//   getSecretarias(): Observable<any> {
+//     return this.http.get(this.jsonURL);
+//   }
+// }
 
 
 

@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     this.secretariaService.getSecretarias().subscribe({
       next: (data) => {
         this.secretarias = data;
-        console.log('Dados recebidos:', this.secretarias);       
+        //console.log('Dados recebidos:', this.secretarias);       
       },
       error: (error) => {
         this.errorMessage = error;
