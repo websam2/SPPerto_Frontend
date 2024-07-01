@@ -28,6 +28,28 @@ module.exports = {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    extend: {
+      width: {
+        '1/20': '5%',
+        '1/10': '10%',
+        '1/5': '20%',
+      },
+      brightness: {
+        '120': '1.2',
+      },
+      height: {
+        '1/5': '20%',
+      },
+      boxShadow: {
+        'custom': '-2px -2px 25px #000, 2px 2px 25px #fff',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      visibility: ['hover'],
+      opacity: ['hover'],
+    },
   },
   plugins: [],
 }
