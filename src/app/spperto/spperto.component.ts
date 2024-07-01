@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import * as moment from 'moment-timezone';
 
 @Component({
@@ -6,14 +6,21 @@ import * as moment from 'moment-timezone';
   templateUrl: './spperto.component.html',
   styleUrls: ['./spperto.component.css']
 })
-export class SppertoComponent implements OnInit {
+export class SppertoComponent implements OnInit, OnDestroy {
   currentDateTime: string = '';
+  private intervalId: any;
 
   constructor() { }
 
   ngOnInit(): void {
     this.updateDateTime();
-    setInterval(() => this.updateDateTime(), 1000); // Atualiza a cada segundo
+    this.intervalId = setInterval(() => this.updateDateTime(), 1000); // Atualiza a cada segundo
+  }
+
+  ngOnDestroy(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 
   updateDateTime(): void {
@@ -21,4 +28,3 @@ export class SppertoComponent implements OnInit {
     this.currentDateTime = brasiliaTime.format('DD/MM/YYYY HH:mm:ss');
   }
 }
-
